@@ -11,6 +11,8 @@ import project3 from "../../public/images/projects/img3.png";
 import project4 from "../../public/images/projects/img4.png";
 import project5 from "../../public/images/projects/img5.png";
 import project6 from "../../public/images/projects/img6.png";
+import project7 from "../../public/images/projects/img7.png";
+
 import {motion} from "framer-motion";
 
 const FramerImage = motion(Image);
@@ -138,6 +140,21 @@ const projects = () => {
                     img={project6}
                     summary="bnsdkxj"
                     link="https://github.com/Ri-yaB/chat-application.git"
+                    github="/"
+                    type="Featured Project"
+                    />
+                </div>
+                <div className='col-span-12'>
+                <FeaturedProject 
+                    title = "PERSONAL PORTFOLIO"
+                    img={project7}
+                    summary={
+                        <>
+                          Introducing my Portfolio Next.js Project, a dynamic web application that showcases my professional journey, skills, and achievements in an engaging and interactive manner. Built with Next.js, a powerful React framework, this project offers a seamless user experience. Visitors can explore my background, key projects, and skills through an intuitive interface.
+                          
+                        </>
+                      }
+                    link="https://github.com/Ri-yaB/Portfolio_rb"
                     github="/"
                     type="Featured Project"
                     />
