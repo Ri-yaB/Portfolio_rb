@@ -38,7 +38,8 @@ const NavBar = () => {
             <motion.a href="https://www.linkedin.com/in/riya-bansal-366a5b20b/" target={"_blank"}whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mx-3'>
             <LinkedInIcon />
             </motion.a>
-            <motion.a href="https://twitter.com" target={"_blank"}whileHover={{y:-2}} whileTap={{scale:0.9}} className='w-6 mx-3'>
+            <motion.a href="https://twitter.com" target={"_blank"}whileHover={{y:-2}} whileTap={{scale:0.9}} 
+            className='w-6 mx-3 bg-light rounded-full'>
             <PinterestIcon />
             </motion.a>
             

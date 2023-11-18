@@ -105,7 +105,7 @@ const articles = () => {
                 />
 
             </ul>
-            <h2 className='font-bold text-4xl w-full mt-32 text-center my-16'>All Articles</h2>
+          {/*  <h2 className='font-bold text-4xl w-full mt-32 text-center my-16'>All Articles</h2>
             <ul>
                 <Article
                 title="bnmskz"
@@ -131,7 +131,7 @@ const articles = () => {
                 link="/"
                 img={article1}
                 />
-            </ul>
+  </ul> */}
         </Layout>
     </main>
     </>
