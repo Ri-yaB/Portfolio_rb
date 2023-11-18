@@ -65,9 +65,10 @@ const Experience = () => {
                 fresher, middle and senior level clients."
                 />
                 <Details 
-                position="WORDPRESS DEVELOPER" company="PEAK & FIND" companyLink= "www.google.com" time="2023-Present" address="Delhi, India" work="Designing and developing user-friendly websites using
+                position="WORDPRESS DEVELOPER" company="PEAK & FIND" companyLink= "www.google.com" time="Oct 2023-Present" address="Delhi, India" work="Designing and developing user-friendly websites using
                 wordpress tool."
                 />
+                
             </ul>
         </div>
 
