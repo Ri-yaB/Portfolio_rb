@@ -159,8 +159,10 @@ const projects = () => {
                     type="Featured Project"
                     />
                 </div>
+                
 
             </div>
+            
             </Layout>
 
         </main>
