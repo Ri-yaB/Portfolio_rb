@@ -7,6 +7,7 @@ import React, { useRef } from 'react'
 import article1 from "../../public/images/articles/article1.png";
 import article2 from "../../public/images/articles/article2.jpg";
 import {motion, useMotionValue} from "framer-motion";
+import TransitionEffect from '@/components/TransitionEffect'
 
 
 const FramerImage = motion(Image);
@@ -37,7 +38,7 @@ const MovingImg = ({title, img, link}) =>{
             style={{x:x, y:y}} 
             initial={{opacity:0}}
             whileInView={{opacity:1, transition:{duration: 0.2}}}
-            ref={imgRef} src={img} alt={title} className='z-10 w-96 h-auto hidden absolute rounded-lg' />
+            ref={imgRef} src={img} alt={title} className='z-10 w-96 h-auto hidden absolute rounded-lg md:hidden' />
         </Link>
     )
 }
@@ -52,7 +53,7 @@ const FeaturedArticle =({img, title, time, summary, link}) =>{
                 <FramerImage src={img} alt={title} className='w-full h-auto' whileHover={{scale:1.05}} transition={{duration:0.2}} />
             </Link>
             <Link href={link} target="_blank">
-                <h2 className='capitalize inline-block hover:underline text-2xl font-bold my-2 mt-4'>{title}</h2>
+                <h2 className='capitalize inline-block hover:underline text-2xl font-bold my-2 mt-4 xs:text-lg'>{title}</h2>
             </Link>
             <p className='text-sm mb-2'>{summary}</p>
             <span className='text-primary font-semibold dark:text-primaryDark'>{time}</span>
@@ -66,13 +67,13 @@ const Article = ({img, title, date, link}) =>{
         initial={{y:200}}
         whileInView={{y:0, transition:{duration:0.5, ease:"easeInOut"}} }
         viewport={{once:true}}
-        className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light'>
+        className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:border-light dark:bg-dark dark:text-light sm:flex-col'>
             <Link href={link} target='_blank'>
                 <h2 className='capitalize text-xl font-semibold hover:underline'>{title}</h2>
             </Link>
             <MovingImg title={title} img={img} link={link} />
             
-            <span className='text-primary dark:text-primaryDark font-semibold pl-4'>{date}</span>
+            <span className='text-primary dark:text-primaryDark font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm'>{date}</span>
 
         </motion.li>
     )
@@ -85,10 +86,11 @@ const articles = () => {
         <title>Riya Bansal | Articles Page</title>
         <meta name="description" content='any description'/>
     </Head>
+    <TransitionEffect />
     <main className='w-full mb-16 flex flex-col dark:text-light items-center justify-center overflow-hidden'>
         <Layout className='pt-16'>
-            <AnimatedText text="Words Can Change The World!" className='mb-16' />
-            <ul className='grid grid-cols-2 gap-16'>
+            <AnimatedText text="Words Can Change The World!" className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl' />
+            <ul className='grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16'>
                 <FeaturedArticle 
                 title="Getting Started with React.js: A Beginner's Guide"
                 summary="If you're a web developer looking to build dynamic and interactive user interfaces, React.js is a remarkable choice. Developed and maintained by Facebook, React.js has become one of the most popular JavaScript libraries for building modern web applications. In this beginner's guide, we'll walk you through the basics of getting started with React.js."
